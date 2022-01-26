@@ -1,0 +1,78 @@
+.logout a {
+  background-color: #EEEEEE;
+  padding: 8px 20px;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+* {
+    box-sizing: border-box;
+  }
+.left {
+    background-color: #2196F3;
+    float: left;
+    width: 45%; /* The width is 20%, by default */
+    font-size: 3vw;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .left:hover{
+    background-color:#1f45ec;
+    margin-top: 0px;
+    transition: 0.5s;
+  }
+  .right:hover{
+    background-color:#177448;
+    margin-top: 0px;
+    transition: 0.5s;
+  }
+
+  .right {
+    background-color: #4CAF50;
+    float: left;
+    width: 45%; /* The width is 20%, by default */
+    font-size: 3vw;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  p{
+      padding: 20px;
+  }
+
+  /* Use a media query to add a break point at 800px: */
+  @media screen and (max-width: 800px) {
+    .left, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  /* detail */
+  .detail {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #d8d0d0;
+  }
+  .detail .col-1  {
+    border-right: 1px solid #ebe7e7;
+    flex-basis: 20%;
+  }
+  .detail .col-2 {
+    flex-basis: 60%;
+  /*   border: 1px solid; */
+  }
+  .detail .col-2  p{
+    line-height: 1.0;
+  }
+  .detail .col-1 img {
+    width: 100%;
+    height: 80%;
+  }

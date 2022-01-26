@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+sup {
+  color: red;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.product-container {
+  display: flex;
+}
+.left-bar {
+  flex-basis: 20%;
+  position: relative;
+/*   border: 1px solid; */
+}
+.title {
+  background: #3daab7;
+  padding: 10px;
+  color: #fff;
+  margin: 10px 0px;
+}
+#xem {
+  color: orange;
+  border: 1px solid;
+}
+#xem:hover {
+  color: green;
+}
+/*all-product*/
+.all-product {
+  flex-basis: 80%;
+  margin-top: 50px;
+ }
+.all-product .col-4 {
+  width: 25%;
+/*   padding: 10px 20px; */
+  float: left;
+  margin: 0px;
+}
+.all-product .col-4 img {
+  width: 100%;
+  height: 300px;
+}
+.product-grid {
+  margin-top: 5px;
+  position: relative;
+  margin-right: 50px;
+}
+.product-grid .product-image {
+  position: relative;
+  overflow: hidden;
+}
+.product-grid .product-image:after{
+  content: "";
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 98%;
+  opacity: 0;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+  transition: all linear 0.5s;
+}
+.product-grid:hover .product-image:after {
+  opacity: 1;
+}
+.product-image .product-trend-label {
+  content: "";
+  color: white;
+  background: orange;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 5px;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  position: absolute;
+}
+.product-image .product-discount-label {
+  content: "";
+  color: white;
+  background: red;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 10px;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  position: absolute;
+  border-radius: 5px;
+}
+.product-grid .social {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 4;
+}
+.product-grid .social li {
+  margin: 0 0 12px;
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: transform 0.5s ease-out 0s;
+}
+.product-grid:hover .social li {
+  opacity: 1;
+  transform: translateX(0);
+}
+.product-grid .social li a {
+  color: white;
+  font-size: 22px;
+  transition: all 0.5s;
+}
+.next-pages {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.next-pages ul li {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: pink;
+  display: inline-block;
+  margin: 0 5px;
+}
+.next-pages ul li:hover {
+  background: red;
+}
+.next-pages ul li a {
+  text-decoration: none;
+  color: white;
+}
+.sidenav {
+  height: fit;
+  width: 90%;
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  margin: auto 10px;
+  background: #111;
+  overflow-x: hidden;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  color: #818181;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  transition: all 1s ease;
+}
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+.active {
+  background-color: green;
+  color: white;
+}
+.sidenav span {
+  float: right;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+.fa-plus{
+  float: right;
+  padding-right: 8px;
+}
+.list-group {
+  width: 250px;
+  margin-left: 20px;
+  margin-top: 200px;
+}
+ .openbtn {
+    display:none ;
+  }
+  .sidenav  .closebtn i{
+    display: none;
+  }
+@media only screen and (min-width: 960px) {
+/* styles for browsers larger than 960px; */
+  .btn {
+    margin: 30px auto;
+  }
+}
+@media only screen and (min-width: 1440px) {
+/* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+/* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+/* styles for mobile browsers smaller than 480px; (iPhone) */
+  
+   .product-container {
+    display: inline-block;
+  }
+  .sidenav {
+    transition: width 0.4s ease-in-out;
+    top: 0px;
+    margin: auto;
+    width: 50%;
+    border-radius: 0px;
+    transform: 1s ease;
+    z-index: 4;
+    display: none;
+  }
+  .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  display: inline-block;
+  padding: 10px 30px;
+  border: none;
+  position: relative;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+ .sidenav  .closebtn i{
+    display: inline;
+  }
+  .all-product {
+    margin-top: 44px;
+    flex-basis: 100%;
+  }
+  .all-product .col-4 {
+    flex-basis: 100%;
+    margin: 10px;
+/*     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px; */
+    text-align: center;
+  }
+  .product-grid  {
+/*     border: 1px solid; */
+    margin: 0 20px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+/* default iPad screens */
+  .product-container {
+    display: inline-block;
+  }
+  .sidenav {
+    transition: width 0.4s ease-in-out;
+    position: fixed;
+    top: 80px;
+    margin: auto;
+    width: 30%;
+    border-radius: 0px;
+/*     display: none; */
+    transform: 1s ease;
+    z-index: 4;
+  }
+  .all-product {
+    margin-top: 20px;
+    flex-basis: 100%;
+  }
+  .all-product .col-4 {
+    flex-basis: 47%;
+    margin: 10px;
+    text-align: center;
+  }
+  .product-grid  {
+    margin: 0 20px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px;
+  }
+}
+
+@media only screen and (device-width: 834px) {
+/* default iPad screens */
+  .product-container {
+    display: inline-block;
+  }
+  .sidenav {
+    transition: width 0.4s ease-in-out;
+    position: fixed;
+    top: 80px;
+    margin: auto;
+    width: 30%;
+    border-radius: 0px;
+    display: none;
+    transform: 1s ease;
+    z-index: 4;
+  }
+  .all-product {
+    margin-top: 20px;
+    flex-basis: 100%;
+  }
+  .all-product .col-4 {
+    flex-basis: 47%;
+    margin: 10px;
+    text-align: center;
+  }
+  .product-grid  {
+    margin: 0 20px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px;
+  }
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+/* For portrait layouts only */
+}

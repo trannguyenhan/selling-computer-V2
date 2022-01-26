@@ -1,0 +1,126 @@
+* {
+  padding:0;
+  margin: 0;
+  text-decoration: none;
+}
+.nav_bar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #3c3c3c;
+  height: 80px;
+/*   flex-wrap: nowrap; */
+}
+.nav_bar nav {
+  flex:1;
+  text-align: right;
+/*   z-index : 2; */
+}
+.nav_bar nav ul{
+  display: inline-block;
+  list-style-type: none;
+/*   margin-bottom: 100px; */
+}
+.nav_bar nav ul li{
+  display: inline-block;
+  margin-right: 15px;
+}
+.nav_bar nav ul li a{
+  text-decoration: none;
+  color: #06e4ff;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: all 0.5s;
+  border: 1px solid transparent;
+  padding: 5px 2px;
+  border-radius: 3px;
+}
+.nav_bar nav ul li a:hover {
+  color: #ff0000;  border: 3px solid white;
+}
+.nav_bar nav ul li span {
+  color: #c1ff00;
+}
+.menu {
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  display: none;
+  margin-left: 10px; 
+}
+@media only screen and (min-width: 960px) {
+
+
+}
+@media only screen and (min-width: 1440px) {
+
+}
+@media only screen and (min-width: 2000px) {
+
+}
+@media only screen and (max-device-width: 480px) {
+
+ .nav_bar nav {
+     z-index: 2;
+   }
+  .nav_bar nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+  }
+  .nav_bar nav ul li {
+    display: block;
+/*     margin-right: 50px; */
+    margin-top: 3px;
+    margin-bottom: 2px;
+  }
+  .nav_bar nav ul li a{
+    font-size: 15px;
+    
+  }
+  .menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+@media only screen and (device-width: 768px) {
+  .nav_bar nav {
+    text-align: left;
+    
+  }
+  .nav_bar nav ul li {
+    display: inline-block;
+    margin-right: 12px;
+  }
+  .nav_bar nav ul li a {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (device-width: 834px) {
+  .nav_bar nav {
+    text-align: left;
+    
+  }
+  .nav_bar nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  .nav_bar nav ul li a {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+}
+
+ @media only screen and (max-width: 800px) {
+   
+}
+ 
